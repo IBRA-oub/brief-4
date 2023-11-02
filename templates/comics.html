@@ -15,7 +15,7 @@
     <header class="header sticky top-0 bg-white shadow-md flex items-center justify-between px-8 py-02 z-20">
       <!-- logo -->
 
-      <a href="">
+      <a href="../index.html">
         <img src="../photo/log1.png" width="20%" height="20%" alt="">
       </a>
 
@@ -58,8 +58,8 @@
     <nav class=" bg-[#A29758] p-2 z-20 h-10  ">
       <ul class=" color flex flex-nowrap justify-around   ">
           <li><a href="comics.html" class="text-white">Comics</a></li>
-          <li><a href="#"  class="text-white">Ajouter Livre</a></li>
-          <li><a href="#"  class="text-white">Modifier Livre</a></li>
+          <li><a href="#"  class="text-white" onclick="ajoutLivre()">Ajouter Livre</a></li>
+          <li><a href="#"  class="text-white" onclick="modLivre()">Modifier Livre</a></li>
           <li><a href="#"  class="text-white">Supprimer Livre</a></li>
         <div class="rechercher relative">
             <i class="fas fa-search absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
@@ -72,6 +72,129 @@
    
 
   <!-- Le contenu de la page va ici -->
+
+   <!-- start-form-ajout -->
+   <div class="ajoutpopup">
+    <div class="formPopup" id="popupForm">
+      <form action="" class="formContainer">
+        <h2>Ajouter un livre</h2>
+        <label for="isbn">
+          <strong>ISBN</strong>
+        </label>
+        <input type="text" id="isbn" placeholder="Your isbn" name="isbn" required>
+        <label for="titre">
+          <strong>Titre</strong>
+        </label>
+        <input type="text" id="titre" placeholder="Your Password" name="titre" required>
+
+
+<!-- start -->
+
+        <label for="descr">
+          <strong>description</strong>
+        </label>
+        <input type="text" id="descr" placeholder="Your Password" name="descr" required>
+
+<!-- end -->
+<!-- start -->
+        <label for="prix">
+          <strong>prix</strong>
+        </label>
+        <input type="text" id="prix" placeholder="prix" name="prix" required>
+<!-- end -->
+<!-- start -->
+<label for="quant">
+<strong>quntite</strong>
+</label>
+<input type="text" id="quant" placeholder="quant" name="quant" required>
+<!-- end -->
+<!-- start -->
+<label for="dispo">
+<strong>disponibilite</strong>
+</label>
+<input type="text" id="dispo" placeholder="disponibilite" name="dispo" required>
+<!-- end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <button type="submit" class="btn">ajouter un livre</button>
+        <button type="button" class="btn cancel" onclick="closeFormaj()">Close</button>
+      </form>
+    </div>
+  </div>
+  <!-- end-form -->
+
+ <!-- start-form-mod -->
+ <div class="ajoutpopup">
+  <div class="formPopup" id="popupFormmod">
+    <form action="" class="formContainer">
+      <h2>Modifier un livre</h2>
+      <label for="isbn">
+        <strong>ISBN</strong>
+      </label>
+      <input type="text" id="isbn" placeholder="Your isbn" name="isbn" required>
+      <label for="titre">
+        <strong>Titre</strong>
+      </label>
+      <input type="text" id="titre" placeholder="Your Password" name="titre" required>
+
+
+<!-- start -->
+
+      <label for="descr">
+        <strong>description</strong>
+      </label>
+      <input type="text" id="descr" placeholder="Your Password" name="descr" required>
+
+<!-- end -->
+<!-- start -->
+      <label for="prix">
+        <strong>prix</strong>
+      </label>
+      <input type="text" id="prix" placeholder="prix" name="prix" required>
+<!-- end -->
+<!-- start -->
+<label for="quant">
+<strong>quntite</strong>
+</label>
+<input type="text" id="quant" placeholder="quant" name="quant" required>
+<!-- end -->
+<!-- start -->
+<label for="dispo">
+<strong>disponibilite</strong>
+</label>
+<input type="text" id="dispo" placeholder="disponibilite" name="dispo" required>
+<!-- end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <button type="submit" class="btn">ajouter un livre</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+</div>
+<!-- end-form -->
+
 
 
       <div class=" p-20 grid grid-cols-1 md:grid-cols-3 gap-10">

@@ -21,3 +21,31 @@ inputs.forEach(input => input.addEventListener(
     validate(event.target, regex[event.target.attributes.name.value])
   }
 ));
+
+
+
+function ajoutLivre() {
+  document.getElementById("popupForm").style.display = "block";
+}
+
+function modLivre() {
+  document.getElementById("popupFormmod").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("popupFormmod").style.display = "none";
+  
+}
+
+function closeFormaj() {
+  document.getElementById("popupForm").style.display = "none";
+  
+}
+
+ajouterLivre.addEventListener("click",function(){
+  document.getElementById("popupForm").style.display = "block";
+});
+
+
+
+
