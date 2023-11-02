@@ -5,67 +5,75 @@
   <meta charset="UTF-8">
   <script src="https://cdn.tailwindcss.com"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://kit.fontawesome.com/d31179dac2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../assets/style.css">
     <title>Document</title>
  
 
 </head>
   <body>
-    <header class="header sticky top-0 bg-white shadow-md flex items-center justify-between px-8 py-02 z-20">
+    <header class=" header sticky top-0 bg-white shadow-md flex items-center justify-around px-8 py-02 z-20">
+
       <!-- logo -->
 
-      <a href="">
-        <img src="../photo/log1.png" width="20%" height="20%" alt="">
-      </a>
-
-
+     
+          <a href="" >
+            <img src="../photo/log1.png" width="20%" height="20%" alt="logo">
+          </a>
+      
+  
       <!-- navigation-principal -->
-      <nav class="nav font-semibold text-lg  ">
-        <ul class="flex items-center">
-          <li
-            class="p-4 border-b-2 border-[#A29758] border-opacity-0 hover:border-opacity-100 hover:text-[#A29758] duration-200 cursor-pointer active">
-            <a href="../index.html" target="_blank">HOME</a>
-          </li>
-          <li
-            class="p-4 border-b-2 border-[#A29758] border-opacity-0 hover:border-opacity-100 hover:text-[#A29758] duration-200 cursor-pointer">
-            <a href="../index.html#popular" target="_blank">POPULAIRE</a>
-          </li>
-          <li
-            class="p-4 border-b-2 border-[#A29758] border-opacity-0 hover:border-opacity-100 hover:text-[#A29758] duration-200 cursor-pointer">
-            <a href="#footer">CONTACT</a>
-          </li>
-          <div class="w-3/12 flex justify-end">
-
+      <nav class=" font-semibold text-lg ">
+        
+          <ul class=" nav md:flex  items-center md:static absolute -left-full  md:w-full bg-white w-full -z-10">
+              <li class="py-7 px-4 md:p-4 border-b-2 border-[#A29758] border-opacity-0 hover:border-opacity-100 hover:text-[#A29758] duration-200 cursor-pointer active">
+                <a href="../index.html">HOME</a>
+              </li>
+              <li class="p-4 border-b-2 border-[#A29758] border-opacity-0 hover:border-opacity-100 hover:text-[#A29758] duration-200 cursor-pointer">
+                <a href="#popular">POPULAIRE</a>
+              </li>
+              <li class="p-4 border-b-2 border-[#A29758] border-opacity-0 hover:border-opacity-100 hover:text-[#A29758] duration-200 cursor-pointer">
+                <a href="#footer">CONTACT</a>
+              </li>  
+              <li class="text-[#89804b] p-4 border-b-2 border-[#A29758] border-opacity-0 hover:border-opacity-100 hover:text-[#A29758] duration-200 cursor-pointer md:hidden">
+                <a href="#footer">ajouter un livre</a>
+              </li>
+              <li class="text-[#89804b] p-4 border-b-2 border-[#A29758] border-opacity-0 hover:border-opacity-100 hover:text-[#A29758] duration-200 cursor-pointer md:hidden">
+                <a href="#footer">modifier un livre</a>
+              </li>
+              <li class="text-[#89804b]  p-4 border-b-2 border-[#A29758] border-opacity-0 hover:border-opacity-100 hover:text-[#A29758] duration-200 cursor-pointer md:hidden">
+                <a href="#footer">supprimer un livre</a>
+              </li>
+          </ul>
+           </nav>
+           <div class=" flex justify-end">
+          
             <a href="">
-              <svg class="h-8 p-1 hover:text-[#A29758] duration-200" aria-hidden="true" focusable="false"
-                data-prefix="far" data-icon="shopping-cart" role="img" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 576 512" class="svg-inline--fa fa-shopping-cart fa-w-18 fa-7x">
-                <path fill="currentColor"
-                  d="M551.991 64H144.28l-8.726-44.608C133.35 8.128 123.478 0 112 0H12C5.373 0 0 5.373 0 12v24c0 6.627 5.373 12 12 12h80.24l69.594 355.701C150.796 415.201 144 430.802 144 448c0 35.346 28.654 64 64 64s64-28.654 64-64a63.681 63.681 0 0 0-8.583-32h145.167a63.681 63.681 0 0 0-8.583 32c0 35.346 28.654 64 64 64 35.346 0 64-28.654 64-64 0-18.136-7.556-34.496-19.676-46.142l1.035-4.757c3.254-14.96-8.142-29.101-23.452-29.101H203.76l-9.39-48h312.405c11.29 0 21.054-7.869 23.452-18.902l45.216-208C578.695 78.139 567.299 64 551.991 64zM208 472c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm256 0c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm23.438-200H184.98l-31.31-160h368.548l-34.78 160z"
-                  class=""></path>
-              </svg>
+                <svg class="  h-8 p-1 hover:text-[#A29758] duration-200" aria-hidden="true" focusable="false" data-prefix="far" data-icon="shopping-cart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-shopping-cart fa-w-18 fa-7x"><path fill="currentColor" d="M551.991 64H144.28l-8.726-44.608C133.35 8.128 123.478 0 112 0H12C5.373 0 0 5.373 0 12v24c0 6.627 5.373 12 12 12h80.24l69.594 355.701C150.796 415.201 144 430.802 144 448c0 35.346 28.654 64 64 64s64-28.654 64-64a63.681 63.681 0 0 0-8.583-32h145.167a63.681 63.681 0 0 0-8.583 32c0 35.346 28.654 64 64 64 35.346 0 64-28.654 64-64 0-18.136-7.556-34.496-19.676-46.142l1.035-4.757c3.254-14.96-8.142-29.101-23.452-29.101H203.76l-9.39-48h312.405c11.29 0 21.054-7.869 23.452-18.902l45.216-208C578.695 78.139 567.299 64 551.991 64zM208 472c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm256 0c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm23.438-200H184.98l-31.31-160h368.548l-34.78 160z" class=""></path></svg>
             </a>
-          </div>
-
-        </ul>
-      </nav>
-    
-
-
-    </header>
+        </div>
+        <div class="ml-8 burgerMenu cursor-pointer">
+          <i class="fa-solid fa-bars fa-xl  md:hidden" style="color: #a29758;"></i>
+         </div>
+  
+           <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
+  </header>
       <!-- navigation2 -->
-    <nav class=" bg-[#A29758] p-2 z-20 h-10  ">
-      <ul class=" color flex flex-nowrap justify-around   ">
-          <li><a href="kids.html" class="text-white">Kids</a></li>
-          <li><a href="#"  class="text-white">Ajouter Livre</a></li>
-          <li><a href="#"  class="text-white">Modifier Livre</a></li>
-          <li><a href="#"  class="text-white">Supprimer Livre</a></li>
-        <div class="rechercher relative">
-            <i class="fas fa-search absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
-            <input type="text" class="pl-3 rounded-md focus:outline-none text-black" placeholder="Rechercher par ID">
-       </div>
-      </ul>
-  </nav>
+      <nav class=" bg-[#A29758] p-2 z-20 h-10  ">
+        <ul class=" color flex flex-nowrap justify-around   ">
+          
+            <li><a href="arab.html" class="text-white md:block ">Kids</a></li>
+            <li><a href="#"  class="text-white hidden md:block">Ajouter Livre</a></li>
+            <li><a href="#"  class="text-white hidden md:block">Modifier Livre</a></li>
+            <li><a href="#"  class="text-white hidden md:block">Supprimer Livre</a></li>
+          
+          <div class="rechercher relative">
+              <i class="fas fa-search absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+              <input type="text" class="pl-3 rounded-md focus:outline-none text-black" placeholder="Rechercher par ID">
+         </div>
+        </ul>
+    </nav>
 
 
    
@@ -300,6 +308,7 @@
                             
           </div>
       </footer> 
+      <script src="../main.js"></script>
   </body>
 
 </html>
