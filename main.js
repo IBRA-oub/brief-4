@@ -21,3 +21,36 @@ inputs.forEach(input => input.addEventListener(
     validate(event.target, regex[event.target.attributes.name.value])
   }
 ));
+
+  //===============burger-menu====================
+  const burger=document.querySelector('.nav');
+  const burgerMenu=document.querySelector('.burgerMenu');
+
+  burgerMenu.addEventListener('click', ()=>{
+
+    burger.classList.toggle('left-0');
+  });
+
+  //====================drop-categorie=================
+  const categorie=document.querySelector('.categorie');
+  const allCaegorie=document.querySelector('.allCategorie');
+
+  categorie.addEventListener('click', ()=>{
+
+    allCaegorie.classList.toggle('left-0');
+  });
+
+  //===================more-drop===================
+  const more=document.querySelector('.more');
+  const moreChose=document.querySelector('.moreChose');
+
+  more.addEventListener('click', ()=>{
+
+    moreChose.classList.toggle('-left-full');
+  });
+
+ 
+  
+ 
+
+  

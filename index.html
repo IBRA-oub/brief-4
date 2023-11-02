@@ -12,20 +12,21 @@
     
  
 
-        <header class=" header sticky top-0 bg-white shadow-md flex items-center justify-between px-8 py-02 z-20">
+        <header class=" header sticky top-0 bg-white shadow-md flex items-center justify-around px-8 py-02 z-20">
 
           <!-- logo -->
 
          
-              <a href="">
-                <img src="photo/log1.png" width="20%" height="20%" alt="">
+              <a href="" >
+                <img src="photo/log1.png" width="20%" height="20%" alt="logo">
               </a>
           
       
           <!-- navigation-principal -->
-          <nav class="nav font-semibold text-lg">
-              <ul class="flex items-center">
-                  <li class="p-4 border-b-2 border-[#A29758] border-opacity-0 hover:border-opacity-100 hover:text-[#A29758] duration-200 cursor-pointer active">
+          <nav class=" font-semibold text-lg ">
+            
+              <ul class=" nav md:flex  items-center md:static absolute -left-full  md:w-full bg-white w-full -z-10">
+                  <li class="py-7 px-4 md:p-4 border-b-2 border-[#A29758] border-opacity-0 hover:border-opacity-100 hover:text-[#A29758] duration-200 cursor-pointer active">
                     <a href="index.html">HOME</a>
                   </li>
                   <li class="p-4 border-b-2 border-[#A29758] border-opacity-0 hover:border-opacity-100 hover:text-[#A29758] duration-200 cursor-pointer">
@@ -35,57 +36,70 @@
                     <a href="#footer">CONTACT</a>
                   </li>
                   
-                  <div class="w-3/12 flex justify-end">
-              
-                      <a href="">
-                          <svg class="h-8 p-1 hover:text-[#A29758] duration-200" aria-hidden="true" focusable="false" data-prefix="far" data-icon="shopping-cart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-shopping-cart fa-w-18 fa-7x"><path fill="currentColor" d="M551.991 64H144.28l-8.726-44.608C133.35 8.128 123.478 0 112 0H12C5.373 0 0 5.373 0 12v24c0 6.627 5.373 12 12 12h80.24l69.594 355.701C150.796 415.201 144 430.802 144 448c0 35.346 28.654 64 64 64s64-28.654 64-64a63.681 63.681 0 0 0-8.583-32h145.167a63.681 63.681 0 0 0-8.583 32c0 35.346 28.654 64 64 64 35.346 0 64-28.654 64-64 0-18.136-7.556-34.496-19.676-46.142l1.035-4.757c3.254-14.96-8.142-29.101-23.452-29.101H203.76l-9.39-48h312.405c11.29 0 21.054-7.869 23.452-18.902l45.216-208C578.695 78.139 567.299 64 551.991 64zM208 472c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm256 0c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm23.438-200H184.98l-31.31-160h368.548l-34.78 160z" class=""></path></svg>
-                      </a>
-                  </div>
+                  
                   
               </ul>
+              
+              
                </nav>
                
+               <div class=" flex justify-end">
+              
+                <a href="">
+                    <svg class="  h-8 p-1 hover:text-[#A29758] duration-200" aria-hidden="true" focusable="false" data-prefix="far" data-icon="shopping-cart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-shopping-cart fa-w-18 fa-7x"><path fill="currentColor" d="M551.991 64H144.28l-8.726-44.608C133.35 8.128 123.478 0 112 0H12C5.373 0 0 5.373 0 12v24c0 6.627 5.373 12 12 12h80.24l69.594 355.701C150.796 415.201 144 430.802 144 448c0 35.346 28.654 64 64 64s64-28.654 64-64a63.681 63.681 0 0 0-8.583-32h145.167a63.681 63.681 0 0 0-8.583 32c0 35.346 28.654 64 64 64 35.346 0 64-28.654 64-64 0-18.136-7.556-34.496-19.676-46.142l1.035-4.757c3.254-14.96-8.142-29.101-23.452-29.101H203.76l-9.39-48h312.405c11.29 0 21.054-7.869 23.452-18.902l45.216-208C578.695 78.139 567.299 64 551.991 64zM208 472c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm256 0c-13.234 0-24-10.766-24-24s10.766-24 24-24 24 10.766 24 24-10.766 24-24 24zm23.438-200H184.98l-31.31-160h368.548l-34.78 160z" class=""></path></svg>
+                </a>
+            </div>
+            <div class="ml-8 burgerMenu cursor-pointer">
+              <i class="fa-solid fa-bars fa-xl  md:hidden" style="color: #a29758;"></i>
+             </div>
       
                <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
       </header>
-      <section id="home" class=" relative h-screen bg-[url('photo/background-home.jpg')] bg-cover bg-center bg-no-repeat">
+      <section id="home" class=" relative h-100 md:h-screen bg-[url('photo/background-home.jpg')] bg-cover bg-center bg-no-repeat">
 
           <!--navbar-categorie-->
-        <nav class="nav font-semibold text-lg  ">
-              <ul class="flex items- justify-center  ">
-                  <li class="p-4 text-white pr-20  pt-1">
+          <div class=" categorie font-semibold text-lg p-4 text-white  md:pr-20  pt-1 md:hidden">categorie <i class="fa-solid fa-caret-down fa-xl" style="color: #ffffff;"></i></div>
+         <nav class=" font-semibold text-lg  ">
+              <ul class=" allCategorie md:flex items- md:justify-center bg-white  md:bg-transparent  md: w-full     md:static absolute -left-full  z-30">
+                  <li class="p-4 text-black md:text-white  md:pr-20  pt-1">
                     <a href="templates/arab.html">Arab</a>
                   </li>
-                  <li class="p-4  text-white  pr-20  pt-1">
+                  <li class="p-4  text-black md:text-white md:pr-20  pt-1">
                     <a href="templates/comics.html">Comics</a>
                   </li>
-                  <li class="p-4 text-white  pr-20  pt-1">
+                  <li class="p-4 text-black md:text-white md:pr-20  pt-1">
                     <a href="templates/kids.html">kids</a>
                   </li>
-                  <li class="p-4 text-white  pr-20  pt-1 ">
-                    <a href="">MORE
-                      <i class="fa-solid fa-caret-down fa-xl" style="color: #ffffff;"></i>
-                    </a>
+                  <li class="more p-4 text-black md:text-white md:pr-20  pt-1    ">
+                    <p>MORE <i class="fa-solid fa-caret-down fa-xl text-black md:text-white "></i></p>
+                    <div class="moreChose  md:bg-white bg-slate-100 rounded-lg   shadow-md   absolute  w-72 z-20 -left-full">
+                      <p class="py-5 text-black pl-5">ajout un categorie</p>
+                      <p class="py-5  text-black pl-5">modifie un categorie</p>
+                      <p class="py-5  text-black pl-5">supprimer un categorie</p>
+                    </div>
+                   
                   </li>
+                  
               </ul>
+              
            </nav>
-          <!-- <div class="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div> -->
+           
           
           <div class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6  lg:h-screen lg:items-center lg:px-8">
-                <div class="text-9xl ">
-                      <h1 class=" text-white text-8xl font-extrabold ">
+                <div class=" ">
+                      <h1 class=" text-white text-5xl md:text-8xl  font-extrabold ">
                         Buy 
                         <span class=" font-extrabold text-[#A29758]">
                           your 
                         </span>
                       </h1>
-                      <h1 class=" text-white text-8xl font-extrabold ">
+                      <h1 class=" text-white text-5xl md:text-8xl font-extrabold ">
                         Favourite
                         <span class=" font-extrabold text-[#A29758]">
                           Book 
                         </span>
                       </h1>
-                      <h1 class=" text-white text-8xl font-extrabold ">
+                      <h1 class=" text-white text-5xl md:text-8xl  font-extrabold ">
                         From 
                         <span class=" font-extrabold text-[#A29758] ">
                         Here
