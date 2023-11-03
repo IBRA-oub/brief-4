@@ -56,12 +56,47 @@
       
                <script src="https://unpkg.com/@themesberg/flowbite@1.1.1/dist/flowbite.bundle.js"></script>
       </header>
+
+
+
+
+      <main>
+        <form class="w-full max-w-lg">
+          <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full px-3">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                Category Title
+              </label>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-cattitle" type="text" placeholder="">
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full px-3">
+              <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+                Category description
+              </label>
+              <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-catdesc" type="text" placeholder="">
+            </div>
+          </div>
+        
+        </form>
+          <div class="button-container">
+            <button class="add-btn px-5 py-2.5 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onclick="addCate()">Add Category</button>
+          </div>
+        </main>
+
+
+
+
+
+
+
       <section id="home" class=" relative h-100 md:h-screen bg-[url('photo/background-home.jpg')] bg-cover bg-center bg-no-repeat">
 
           <!--navbar-categorie-->
           <div class=" categorie font-semibold text-lg p-4 text-white  md:pr-20  pt-1 md:hidden">categorie <i class="fa-solid fa-caret-down fa-xl" style="color: #ffffff;"></i></div>
          <nav class=" font-semibold text-lg  ">
-              <ul class=" allCategorie md:flex items- md:justify-center bg-white  md:bg-transparent  md: w-full     md:static absolute -left-full  z-30">
+              <ul class=" allCategorie md:flex items- md:justify-center bg-white  md:bg-transparent  md: w-full     md:static absolute -left-full  z-30" id="cates-wrapper">
                   <li class="p-4 text-black md:text-white  md:pr-20  pt-1">
                     <a href="templates/arab.html">Arab</a>
                   </li>
