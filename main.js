@@ -387,7 +387,7 @@ document.addEventListener('DOMContentLoaded', function () {
   more.addEventListener('click', ()=>{
 
     moreChose.classList.toggle('-left-full');
-  });
+  }); 
 
 
 
