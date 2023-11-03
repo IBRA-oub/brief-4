@@ -379,8 +379,33 @@ window.addEventListener("load", () => {
 
 
 /* CRUD ----cate*/
+//====================drop-categorie=================
+const categorie=document.querySelector('.categorie');
+const allCaegorie=document.querySelector('.allCategorie');
 
+categorie.addEventListener('click', ()=>{
 
+  allCaegorie.classList.toggle('left-0');
+});
+
+//===================more-drop===================
+const more=document.querySelector('.more');
+const moreChose=document.querySelector('.moreChose');
+
+more.addEventListener('click', ()=>{
+
+  moreChose.classList.toggle('-left-full');
+}); 
+ //===============burger-menu====================
+ const burger=document.querySelector('.nav');
+ const burgerMenu=document.querySelector('.burgerMenu');
+
+ burgerMenu.addEventListener('click', ()=>{
+
+   burger.classList.toggle('left-0');
+ });
+
+ 
 
 
 
@@ -512,56 +537,8 @@ document.addEventListener('DOMContentLoaded', function () {
 ///////////////////////////////////////////
 
 
-
-  //===============burger-menu====================
-  const burger=document.querySelector('.nav');
-  const burgerMenu=document.querySelector('.burgerMenu');
-
-  burgerMenu.addEventListener('click', ()=>{
-
-    burger.classList.toggle('left-0');
-  });
-  //=========================ajout-drop-descktop=================
-  const ajoutBtn=document.querySelector('.ajoutBtn');
-  const ajoutCategorie=document.querySelector('.ajouteCategorie');
-
-  ajoutBtn.addEventListener('click', ()=>{
-
-    
-    ajoutCategorie.classList.toggle('absolute');
-    ajoutCategorie.classList.toggle('relative');
-    ajoutCategorie.classList.toggle('left-0');
-
-  });
-  //=========================ajout-drop-mobil=================
-  const ajoutBtnMobile=document.querySelector('.ajoutBtnMobile');
-  const jouteCategorieMobile=document.querySelector('.jouteCategorieMobile');
-
-  ajoutBtnMobile.addEventListener('click', ()=>{
-
-    
-    jouteCategorieMobile.classList.toggle('absolute');
-    jouteCategorieMobile.classList.toggle('relative');
-    jouteCategorieMobile.classList.toggle('left-0');
-
-  });
-  //====================drop-categorie=================
-  const categorie=document.querySelector('.categorie');
-  const allCaegorie=document.querySelector('.allCategorie');
-
-  categorie.addEventListener('click', ()=>{
-
-    allCaegorie.classList.toggle('left-0');
-  });
-
-  //===================more-drop===================
-  const more=document.querySelector('.more');
-  const moreChose=document.querySelector('.moreChose');
-
-  more.addEventListener('click', ()=>{
-
-    moreChose.classList.toggle('-left-full');
-  });
+ 
+ 
 
 
 
