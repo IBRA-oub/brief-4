@@ -555,6 +555,32 @@
           </div>
       </footer> 
       <script src="../main.js"></script>
+      <script>
+        //=========================ajout-drop-descktop=================
+          const ajoutBtn=document.querySelector('.ajoutBtn');
+          const ajoutCategorie=document.querySelector('.ajouteCategorie');
+         
+          ajoutBtn.addEventListener('click', ()=>{
+         
+            
+            ajoutCategorie.classList.toggle('absolute');
+            ajoutCategorie.classList.toggle('relative');
+            ajoutCategorie.classList.toggle('left-0');
+         
+          });
+          //=========================ajout-drop-mobil=================
+          const ajoutBtnMobile=document.querySelector('.ajoutBtnMobile');
+          const jouteCategorieMobile=document.querySelector('.jouteCategorieMobile');
+         
+          ajoutBtnMobile.addEventListener('click', ()=>{
+         
+            
+            jouteCategorieMobile.classList.toggle('absolute');
+            jouteCategorieMobile.classList.toggle('relative');
+            jouteCategorieMobile.classList.toggle('left-0');
+         
+          });
+          </script>
   </body>
 
 </html>
