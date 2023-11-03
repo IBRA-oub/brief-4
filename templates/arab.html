@@ -13,7 +13,7 @@
 
 </head>
   <body>
-    <header class=" header sticky top-0 bg-white shadow-md flex items-center justify-around px-8 py-02 z-20">
+    <header class=" header sticky top-0 bg-gray-50 shadow-md flex items-center justify-around px-8 py-02 z-20">
 
       <!-- logo -->
 
@@ -26,7 +26,7 @@
       <!-- navigation-principal -->
       <nav class=" font-semibold text-lg ">
         
-          <ul class=" nav md:flex  items-center md:static absolute -left-full  md:w-full bg-white w-full -z-10">
+          <ul class=" nav md:flex  items-center md:static absolute -left-full  md:w-full bg-gray-50 w-full -z-10">
               <li class="py-7 px-4 md:p-4 border-b-2 border-[#A29758] border-opacity-0 hover:border-opacity-100 hover:text-[#A29758] duration-200 cursor-pointer active">
                 <a href="../index.html">HOME</a>
               </li>
@@ -68,10 +68,14 @@
             <li><a href="#"  class="text-white hidden md:block">Modifier Livre</a></li>
             <li><a href="#"  class="text-white hidden md:block">Supprimer Livre</a></li>
           
-          <div class="rechercher relative">
-              <i class="fas fa-search absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
-              <input type="text" class="pl-3 rounded-md focus:outline-none text-black" placeholder="Rechercher par ID">
-         </div>
+          <div >
+            <div class="relative rounded-md shadow-sm">
+              <input type="text" id="searchInput" class="form-input block w-full pl-10 pr-3 py-2 sm:text-sm sm:leading-5" placeholder="Rechercher un livre">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <i class="fas fa-search text-gray-400"></i>
+              </div>
+            </div>
+          </div>
         </ul>
     </nav>
 
@@ -81,12 +85,12 @@
   <!-- Le contenu de la page va ici -->
 
 
-      <div class=" p-20 grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
         <!-- Book Card 1 -->
-        <div class="relative bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="box" class=" relative bg-white shadow-lg rounded-lg overflow-hidden">
           <img src="../photo/kh.jpg" alt="Book 1" class=" px-20 py-3 h-50 w-100  object-cover">
           <div class="p-4">
-            <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 1</h2>
+            <h2 class=" text-xl font-semibold text-gray-800 mb-2">Book Title 1</h2>
             <p class="text-lg text-gray-900">Nom d'auteur</p>
             <p class="text-lg text-gray-900">quantiter</p>
             <p class="text-lg text-gray-900">ID</p>
@@ -98,10 +102,10 @@
         </div>
 
         <!-- Book Card 2 -->
-        <div class="relative bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="../photo/ss.jpg" alt="Book 2" class=" px-20 py-3 h-50 w-fit  object-cover ">
+        <div class="box"  class=" relative bg-white shadow-lg rounded-lg overflow-hidden">
+          <img src="../photo/ss.jpg" alt="Book 2" class=" px-20 py-3 h-50 w-fit  object-cover ">
           <div class="p-4">
-            <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 2</h2>
+            <h2 class=" text-xl font-semibold text-gray-800 mb-2">Book Title 2</h2>
             <p class="text-lg text-gray-900">Nom d'auteur</p>
             <p class="text-lg text-gray-900">quantiter</p>
             <p class="text-lg text-gray-900">ID</p>
@@ -113,10 +117,10 @@
         </div>
 
         <!-- Book Card 3 -->
-        <div class="relative bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="box" class=" relative bg-white shadow-lg rounded-lg overflow-hidden">
           <img src="../photo/b2.jpg" alt="Book 3" class=" px-20 py-4 h-50 w-100  object-cover">
           <div class="p-4">
-            <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 3</h2>
+            <h2 class=" text-xl font-semibold text-gray-800 mb-2">Book Title 3</h2>
             <p class="text-lg text-gray-900">Nom d'auteur</p>
             <p class="text-lg text-gray-900">quantiter</p>
             <p class="text-lg text-gray-900">ID</p>
@@ -128,10 +132,10 @@
         </div>
         
           <!-- Book Card 4 -->
-          <div class="relative bg-white shadow-lg rounded-lg overflow-hidden">
+          <div class="box" class="relative bg-white shadow-lg rounded-lg overflow-hidden">
             <img src="../photo/b4.png" alt="Book 1" class="px-20 py-3 h-50 w-100  object-cover">
             <div class="p-4">
-              <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 4</h2>
+              <h2 class=" text-xl font-semibold text-gray-800 mb-2">Book Title 4</h2>
               <p class="text-lg text-gray-900">Nom d'auteur</p>
               <p class="text-lg text-gray-900">quantiter</p>
               <p class="text-lg text-gray-900">ID</p>
@@ -143,10 +147,10 @@
           </div>
   
           <!-- Book Card 5 -->
-          <div class="relative bg-white shadow-lg rounded-lg overflow-hidden">
+          <div class="box" class=" relative bg-white shadow-lg rounded-lg overflow-hidden">
             <img src="../photo/b2.jpg" alt="Book 2" class="  px-20 py-3 h-50 w-100  object-cover">
             <div class="p-4">
-              <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 5</h2>
+              <h2 class=" text-xl font-semibold text-gray-800 mb-2">Book Title 5</h2>
             <p class="text-lg text-gray-900">Nom d'auteur</p>
             <p class="text-lg text-gray-900">quantiter</p>
             <p class="text-lg text-gray-900">ID</p>
@@ -158,10 +162,10 @@
           </div>
   
           <!-- Book Card 6 -->
-          <div class="relative bg-white shadow-lg rounded-lg overflow-hidden">
+          <div class="box" class=" relative bg-white shadow-lg rounded-lg overflow-hidden">
             <img src="../photo/b1.jpg" alt="Book 3" class="px-20 py-3 h-50 w-100  object-cover">
             <div class="p-4">
-              <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 6</h2>
+              <h2 class=" text-xl font-semibold text-gray-800 mb-2">Book Title 6</h2>
               <p class="text-lg text-gray-900">Nom d'auteur</p>
               <p class="text-lg text-gray-900">quantiter</p>
               <p class="text-lg text-gray-900">ID</p>
@@ -298,7 +302,40 @@
                             
           </div>
       </footer> 
-      <script src="../main.js">  </script>
+      <script src="../main.js"></script>
+      <script>
+
+     document.addEventListener('DOMContentLoaded', function() {
+        const boxes = document.querySelectorAll('.box');
+        const searchInput = document.getElementById('searchInput');
+        
+        console.log("s")
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = searchInput.value.toLowerCase();
+
+            boxes.forEach(box => {
+                box.classList.add('hidden');
+            
+            });
+
+            
+            boxes.forEach(box => {
+
+                const title = box.querySelector('h2').textContent.toLowerCase();
+                if (title.includes(searchTerm)) {
+                    box.classList.remove('hidden');
+                    console.log(title);
+                    console.log(searchTerm);
+                } else {
+                    
+                    box.classList.add('hidden');
+                    
+                }
+            });
+        });
+  });
+      </script>
   </body>
 
 </html>

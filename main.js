@@ -49,8 +49,6 @@ inputs.forEach(input => input.addEventListener(
     moreChose.classList.toggle('-left-full');
   });
 
- 
-  
- 
+ //================recherche======================
 
-  
+ 
