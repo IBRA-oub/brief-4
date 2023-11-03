@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <script src="https://cdn.tailwindcss.com"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <script src="https://kit.fontawesome.com/d31179dac2.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../assets/style.css">
-    <title>Enfants</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   <script src="https://kit.fontawesome.com/d31179dac2.js" crossorigin="anonymous"></script>
+    <title>Cuisine</title>
  
 
 </head>
@@ -63,7 +63,7 @@
       <nav class=" bg-[#A29758] p-2 z-20 h-10  ">
         <ul class=" color flex flex-nowrap justify-around   ">
           
-            <li><a href="arab.html" class="text-white md:block ">Enfants</a></li>
+            <li><a href="arab.html" class="text-white md:block ">Cuisine</a></li>
             <li><a href="#"  class="text-white hidden md:block">Ajouter Livre</a></li>
             <li><a href="#"  class="text-white hidden md:block">Modifier Livre</a></li>
             <li><a href="#"  class="text-white hidden md:block">Supprimer Livre</a></li>
@@ -75,16 +75,73 @@
         </ul>
     </nav>
 
-
+    <main>
+      <form class="w-full max-w-lg">
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+             Book Title
+            </label>
+            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-title" type="text" placeholder="Jane">
+          </div>
+          <div class="w-full md:w-1/2 px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-last-name">
+              Prix
+            </label>
+            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-prix" type="text" placeholder="Doe">
+          </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full px-3">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
+              Book description
+            </label>
+            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-desc" type="text" placeholder="">
+            <!-- <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p> -->
+          </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 mb-2">
+          <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+              ISBN
+            </label>
+            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-isbn" type="text" placeholder="Albuquerque">
+          </div>
+          <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+              Disponibilite
+            </label>
+            <div class="relative">
+              <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-dispo">
+                <option>Dispo</option>
+                <option>No dispo</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+             id
+            </label>
+            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-id" type="text" placeholder="90210">
+          </div>
+        </div>
+      </form>
+        <div class="button-container">
+          <button class="add-btn px-5 py-2.5 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onclick="addBook()">Add Book</button>
+        </div>
+      </main>
    
 
   <!-- Le contenu de la page va ici -->
 
 
-  <div class="cards p-20 grid grid-cols-1 md:grid-cols-3 gap-10">
+  <div class="cards p-20 grid grid-cols-1 md:grid-cols-3 gap-10" id="bookes-wrapper">
     <!-- Book Card 1 -->
     <div class="card relative bg-white shadow-lg rounded-lg overflow-hidden">
-      <img src="../photo/k1.jpg" alt="Book 1" class=" px-20 py-3 h-50 w-100  object-cover">
+      <img src="../photo/c1.jpg" alt="Book 1" class=" px-20 py-3 h-50 w-100  object-cover">
       <div class="p-4">
         <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 1</h2>
         <p class="text-lg text-gray-900">Nom d'auteur</p>
@@ -99,7 +156,7 @@
 
     <!-- Book Card 2 -->
     <div class=" card relative bg-white shadow-lg rounded-lg overflow-hidden">
-    <img src="../photo/k2.jpg" alt="Book 2" class=" px-20 py-3 h-50 w-fit  object-cover ">
+    <img src="../photo/c2.jpg" alt="Book 2" class=" px-20 py-3 h-50 w-fit  object-cover ">
       <div class="p-4">
         <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 2</h2>
         <p class="text-lg text-gray-900">Nom d'auteur</p>
@@ -114,7 +171,7 @@
 
     <!-- Book Card 3 -->
     <div class="card relative bg-white shadow-lg rounded-lg overflow-hidden">
-      <img src="../photo/k3.jpg" alt="Book 3" class=" px-20 py-4 h-50 w-100  object-cover">
+      <img src="../photo/c3.jpg" alt="Book 3" class=" px-20 py-4 h-50 w-100  object-cover">
       <div class="p-4">
         <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 3</h2>
         <p class="text-lg text-gray-900">Nom d'auteur</p>
@@ -129,7 +186,7 @@
     
       <!-- Book Card 4 -->
       <div class=" card relative bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="../photo/k4.jpg" alt="Book 1" class="px-20 py-3 h-50 w-100  object-cover">
+        <img src="../photo/c4.jpg" alt="Book 1" class="px-20 py-3 h-50 w-100  object-cover">
         <div class="p-4">
           <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 4</h2>
           <p class="text-lg text-gray-900">Nom d'auteur</p>
@@ -144,7 +201,7 @@
 
       <!-- Book Card 5 -->
       <div class="card relative bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="../photo/k5.jpg" alt="Book 2" class="  px-20 py-3 h-50 w-100  object-cover">
+        <img src="../photo/c5.jpg" alt="Book 2" class="  px-20 py-3 h-50 w-100  object-cover">
         <div class="p-4">
           <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 5</h2>
         <p class="text-lg text-gray-900">Nom d'auteur</p>
@@ -159,7 +216,7 @@
 
       <!-- Book Card 6 -->
       <div class="card relative bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="../photo/k6.jpg" alt="Book 3" class="px-20 py-3 h-50 w-100  object-cover">
+        <img src="../photo/c6.jpg" alt="Book 3" class="px-20 py-3 h-50 w-100  object-cover">
         <div class="p-4">
           <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 6</h2>
           <p class="text-lg text-gray-900">Nom d'auteur</p>
@@ -177,7 +234,7 @@
 
       <!-- Book Card 1 -->
       <div class="card relative bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="../photo/k7.jpg" alt="Book 1" class=" px-20 py-3 h-50 w-100  object-cover">
+        <img src="../photo/c7.jpg" alt="Book 1" class=" px-20 py-3 h-50 w-100  object-cover">
         <div class="p-4">
           <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 1</h2>
           <p class="text-lg text-gray-900">Nom d'auteur</p>
@@ -192,7 +249,7 @@
 
       <!-- Book Card 2 -->
       <div class=" card relative bg-white shadow-lg rounded-lg overflow-hidden">
-      <img src="../photo/k8.jpg" alt="Book 2" class=" px-20 py-3 h-50 w-fit  object-cover ">
+      <img src="../photo/b8.jpg" alt="Book 2" class=" px-20 py-3 h-50 w-fit  object-cover ">
         <div class="p-4">
           <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 2</h2>
           <p class="text-lg text-gray-900">Nom d'auteur</p>
@@ -207,7 +264,7 @@
 
       <!-- Book Card 3 -->
       <div class="card relative bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="../photo/k9.jpg" alt="Book 3" class=" px-20 py-4 h-50 w-100  object-cover">
+        <img src="../photo/c9.jpg" alt="Book 3" class=" px-20 py-4 h-50 w-100  object-cover">
         <div class="p-4">
           <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 3</h2>
           <p class="text-lg text-gray-900">Nom d'auteur</p>
@@ -222,7 +279,7 @@
       
         <!-- Book Card 4 -->
         <div class=" card relative bg-white shadow-lg rounded-lg overflow-hidden">
-          <img src="../photo/k10.jpg" alt="Book 1" class="px-20 py-3 h-50 w-100  object-cover">
+          <img src="../photo/c10.jpg" alt="Book 1" class="px-20 py-3 h-50 w-100  object-cover">
           <div class="p-4">
             <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 4</h2>
             <p class="text-lg text-gray-900">Nom d'auteur</p>
@@ -237,7 +294,7 @@
 
         <!-- Book Card 5 -->
         <div class="card relative bg-white shadow-lg rounded-lg overflow-hidden">
-          <img src="../photo/k11.jpg" alt="Book 2" class="  px-20 py-3 h-50 w-100  object-cover">
+          <img src="../photo/c11.jpg" alt="Book 2" class="  px-20 py-3 h-50 w-100  object-cover">
           <div class="p-4">
             <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 5</h2>
           <p class="text-lg text-gray-900">Nom d'auteur</p>
@@ -252,7 +309,7 @@
 
         <!-- Book Card 6 -->
         <div class="card relative bg-white shadow-lg rounded-lg overflow-hidden">
-          <img src="../photo/k12.jpg" alt="Book 3" class="px-20 py-3 h-50 w-100  object-cover">
+          <img src="../photo/c12.jpg" alt="Book 3" class="px-20 py-3 h-50 w-100  object-cover">
           <div class="p-4">
             <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 6</h2>
             <p class="text-lg text-gray-900">Nom d'auteur</p>
@@ -267,7 +324,7 @@
 
         <!-- Book Card 1 -->
       <div class="card relative bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="../photo/k13.jpg" alt="Book 1" class=" px-20 py-3 h-50 w-100  object-cover">
+        <img src="../photo/c13.jpg" alt="Book 1" class=" px-20 py-3 h-50 w-100  object-cover">
         <div class="p-4">
           <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 1</h2>
           <p class="text-lg text-gray-900">Nom d'auteur</p>
@@ -282,7 +339,7 @@
 
       <!-- Book Card 2 -->
       <div class=" card relative bg-white shadow-lg rounded-lg overflow-hidden">
-      <img src="../photo/k14.jpg" alt="Book 2" class=" px-20 py-3 h-50 w-fit  object-cover ">
+      <img src="../photo/c14.jpg" alt="Book 2" class=" px-20 py-3 h-50 w-fit  object-cover ">
         <div class="p-4">
           <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 2</h2>
           <p class="text-lg text-gray-900">Nom d'auteur</p>
@@ -297,7 +354,7 @@
 
       <!-- Book Card 3 -->
       <div class="card relative bg-white shadow-lg rounded-lg overflow-hidden">
-        <img src="../photo/k15.jpg" alt="Book 3" class=" px-20 py-4 h-50 w-100  object-cover">
+        <img src="../photo/c15.jpg" alt="Book 3" class=" px-20 py-4 h-50 w-100  object-cover">
         <div class="p-4">
           <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 3</h2>
           <p class="text-lg text-gray-900">Nom d'auteur</p>
@@ -312,7 +369,7 @@
       
         <!-- Book Card 4 -->
         <div class=" card relative bg-white shadow-lg rounded-lg overflow-hidden">
-          <img src="../photo/k16.jpg" alt="Book 1" class="px-20 py-3 h-50 w-100  object-cover">
+          <img src="../photo/c16.jpg" alt="Book 1" class="px-20 py-3 h-50 w-100  object-cover">
           <div class="p-4">
             <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 4</h2>
             <p class="text-lg text-gray-900">Nom d'auteur</p>
@@ -327,7 +384,7 @@
 
         <!-- Book Card 5 -->
         <div class="card relative bg-white shadow-lg rounded-lg overflow-hidden">
-          <img src="../photo/k17.jpg" alt="Book 2" class="  px-20 py-3 h-50 w-100  object-cover">
+          <img src="../photo/c17.jpg" alt="Book 2" class="  px-20 py-3 h-50 w-100  object-cover">
           <div class="p-4">
             <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 5</h2>
           <p class="text-lg text-gray-900">Nom d'auteur</p>
@@ -342,7 +399,7 @@
 
         <!-- Book Card 6 -->
         <div class="card relative bg-white shadow-lg rounded-lg overflow-hidden">
-          <img src="../photo/k18.jpg" alt="Book 3" class="px-20 py-3 h-50 w-100  object-cover">
+          <img src="../photo/c18.jpg" alt="Book 3" class="px-20 py-3 h-50 w-100  object-cover">
           <div class="p-4">
             <h2 class="text-xl font-semibold text-gray-800 mb-2">Book Title 6</h2>
             <p class="text-lg text-gray-900">Nom d'auteur</p>
@@ -367,7 +424,7 @@
     <ul class="inline-flex">
       <li><button class="px-4 py-2 text-[#A29758] transition-colors duration-150 bg-white border border-r-0 border-[#A29758] rounded-l-lg focus:shadow-outline hover:bg-green-100" id="prevPage">Précedent</button></li>
       <li><button class="px-4 py-2 text-[#A29758] transition-colors duration-150 bg-white border border-r-0 border-[#A29758] focus:shadow-outline " data-page="1" >1</button></li>
-      <li><button class="px-4 py-2 text-[#A29758] transition-colors duration-150 bg-white border border-r-0 border-[#A29758] focus:shadow-outline "" data-page="2">2</button></li>
+      <li><button class="px-4 py-2 text-[#A29758] transition-colors duration-150 bg-white border border-r-0 border-[#A29758] focus:shadow-outline" data-page="2">2</button></li>
       <li><button class="px-4 py-2 text-[#A29758] transition-colors duration-150 bg-white border border-r-0 border-[#A29758] focus:shadow-outline hover:bg-green-100" data-page="3">3</button></li>
       <li><button class="px-4 py-2 text-[#A29758] transition-colors duration-150 bg-white border border-[#A29758] rounded-r-lg focus:shadow-outline hover:bg-green-100" id="nextPage">Suivant</button></li>
     </ul>
