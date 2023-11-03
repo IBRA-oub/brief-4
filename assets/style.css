@@ -1,0 +1,17 @@
+.valid {
+    padding: 20px;
+    display: block;
+    border: 2px solid #36cc36;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  
+  .invalid {
+    padding: 20px;
+    display: block;
+    border: 2px solid #ff5252; 
+    box-shadow: 0 0 5px rgba(255, 82, 82, 0.7);
+    margin-bottom: 10px;
+    width: 100%;
+   
+  }
