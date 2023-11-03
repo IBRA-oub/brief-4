@@ -220,7 +220,181 @@ window.addEventListener("load", () => {
 
 
 
-/*const regex = {
+
+
+
+
+/* CRUD ---- cate*/
+
+
+
+const catesWrapper = document.getElementById("cates-wrapper");
+const ctitlee = document.getElementById("grid-cattitle");
+const cdesc = document.getElementById("grid-catdesc");
+
+
+
+let catesData = [];
+
+const createCate = (cid, ctitlee, cdesc) => {
+  console.log("test-createcategory");
+  const cate = document.createElement("div");
+  cate.className = "cate";
+  cate.id = cid;
+  cate.innerHTML = `
+  <li class="p-4 text-black md:text-white  md:pr-20  pt-1">
+  <a href="templates/arab.html">${ctitlee}</a>
+  </li>
+  `;
+
+  catesWrapper.insertBefore(cate, catesWrapper.firstChild);
+};
+
+const addCate = () => {
+  if (ctitlee.value.trim().length == 0 && content.value.trim().length == 0) {
+    error.innerHTML = "Cate cannot be empty";
+    return;
+  }
+
+  console.log("AddCate-test <passed>");
+  
+
+
+  const cid = new Date().getTime().toString();
+
+  const catObj = {
+    cid: cid,
+    ctitlee: ctitlee.value,
+    cdesc: cdesc.value,
+  };
+
+  catesData.push(catObj);
+  localStorage.setItem("cates", JSON.stringify(catesData));
+  
+  createCate(catObj.cid, catObj.ctitlee, catObj.cdesc);
+
+  content.value = "";
+  titlee.value = "";
+};
+
+
+
+
+
+
+
+
+// const editCate = (cid) => {
+//   const book = document.getElementById(cid);
+
+//   const booktitle = book.querySelector(".book-title");
+//   const bookdesc = book.querySelector(".book-desc");
+//   const bookprix = book.querySelector(".book-prix");
+//   const bookisbn = book.querySelector(".book-isbn");
+//   const bookdispo = book.querySelector(".book-dispo");
+//   const bookSave = book.querySelector(".book-save");
+//   const bookEdit = book.querySelector(".book-edit");
+
+//   booktitle.contentEditable = "true";
+//   bookdesc.contentEditable = "true";
+//   bookprix.contentEditable = "true";
+//   bookisbn.contentEditable = "true";
+//   bookdispo.contentEditable = "true";
+//   bookEdit.style.display = "none";
+//   bookSave.style.display = "block";
+//   booktitle.focus();
+// };
+
+
+
+
+
+
+
+
+// const saveBook = (cid) => {
+//   const book = document.getElementById(cid);
+
+//   const booktitle = book.querySelector(".book-title");
+//   const bookdesc = book.querySelector(".book-desc");
+//   const bookprix = book.querySelector(".book-prix");
+//   const bookisbn = book.querySelector(".book-isbn");
+//   const bookdispo = book.querySelector(".book-dispo");
+//   const bookSave = book.querySelector(".book-save");
+//   const bookEdit = book.querySelector(".book-edit");
+
+//   if (
+//     booktitle.innerText.trim().length == 0
+//   ) {
+//     error.innerHTML = "title cannot be empty";
+//     return;
+//   }
+
+//   booksData.forEach((book) => {
+//     if (book.cid == cid) {
+//       book.title = booktitle.innerText;
+//       book.desc = bookdesc.innerText;
+//       book.prix = bookprix.innerText;
+//       book.isbn = bookisbn.innerText;
+//       book.disp = bookdispo.innerText;
+//     }
+//   });
+
+//   localStorage.setItem("books", JSON.stringify(booksData));
+
+//   booktitle.contentEditable = "false";
+//   bookdesc.contentEditable = "false";
+//   bookprix.contentEditable = "false";
+//   bookisbn.contentEditable = "false";
+//   bookdispo.contentEditable = "false";
+//   bookEdit.style.display = "block";
+//   bookSave.style.display = "none";
+//   error.innerText = "";
+// };
+
+
+
+// const deleteBook = (cid) => {
+//   let confirmDelete = confirm("Are you sure you want to delete this book?");
+//   if (!confirmDelete) {
+//     return;
+//   }
+
+//   const book = document.getElementById(cid);
+//   book.parentNode.removeChild(book);
+//   booksData = booksData.filter((book) => {
+//     return book.cid != cid;
+//   });
+//   localStorage.setItem("books", JSON.stringify(booksData));
+// };
+
+window.addEventListener("load", () => {
+  catesData = localStorage.getItem("cates")
+    ? JSON.parse(localStorage.getItem("cates"))
+    : [];
+  catesData.forEach((cate) => {
+    createCate(cate.cid, cate.ctitlee, cate.cdesc);
+  });
+});
+
+
+/* CRUD ----cate*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const regex = {
     email: /^([a-z\d.-]+)@([a-z-]+).([a-z]{1,3}).([a-z]{1,3})?$/,
 }
 
@@ -237,9 +411,9 @@ function validate(input, regex) {
 
 inputs.forEach(input => input.addEventListener(
   'focusout', function(event) {
-    validate(event.target, regex[event.target.attributes.name])
+    validate(event.target, regex[event.target.attributes.name.value])
   }
-));*/
+));
 
 //////////////////////////////////////////////////////////////////////////
 document.addEventListener('DOMContentLoaded', function () {
