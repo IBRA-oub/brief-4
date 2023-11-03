@@ -1,5 +1,38 @@
 console.log("first test");
+//=================recherche================
+const boxes = document.querySelectorAll('#box');
+document.addEventListener('DOMContentLoaded', function() {
+   
+   const searchInput = document.getElementById('searchInput');
+   
+   console.log("s")
 
+   searchInput.addEventListener('input', function() {
+       const searchTerm = searchInput.value.toLowerCase();
+
+       boxes.forEach(box => {
+           box.classList.add('hidden');
+       
+       });
+
+       
+       boxes.forEach(box => {
+
+           const title = box.querySelector('h2').textContent.toLowerCase();
+           if (title.includes(searchTerm)) {
+               box.classList.remove('hidden');
+               console.log(title);
+               console.log(searchTerm);
+           } else {
+               
+               box.classList.add('hidden');
+               
+           }
+       });
+   });
+});
+
+//========================fin-recherche=================
 
 /* CRUD ---- BOOK*/
 
@@ -24,7 +57,7 @@ const createBook = (uid, titlee, desc, prix, isbn ,dispo) => {
   <img src="../photo/c1.jpg" alt="Book 1" class=" px-20 py-3 h-50 w-100  object-cover">
   <div class="p-4">
   <div class="book-controls">
-  <button type="button" class="book-edit text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 " onclick="editBook(${uid})">Editer</button>
+  <button type="button" class="book-edit text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800  dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 " onclick="editBook(${uid})">Editer</button>
 
   <button type="button" class="book-save text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2" style="display:none" onclick="saveBook(${uid})" >Save</button>
 
@@ -187,7 +220,7 @@ window.addEventListener("load", () => {
 
 
 
-const regex = {
+/*const regex = {
     email: /^([a-z\d.-]+)@([a-z-]+).([a-z]{1,3}).([a-z]{1,3})?$/,
 }
 
@@ -206,7 +239,7 @@ inputs.forEach(input => input.addEventListener(
   'focusout', function(event) {
     validate(event.target, regex[event.target.attributes.name])
   }
-));
+));*/
 
 //////////////////////////////////////////////////////////////////////////
 document.addEventListener('DOMContentLoaded', function () {
@@ -236,9 +269,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
       cards.forEach(function (card, index) {
           if (index >= startIndex && index < endIndex) {
-              card.style.display = 'block';
+              //card.style.display = 'block';
+              card.classList.remove("hidden");
           } else {
-              card.style.display = 'none';
+             // card.style.display = 'none';
+              card.classList.add("hidden");
           }
       });
   }
@@ -312,7 +347,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
     burger.classList.toggle('left-0');
   });
+  //=========================ajout-drop-descktop=================
+  const ajoutBtn=document.querySelector('.ajoutBtn');
+  const ajoutCategorie=document.querySelector('.ajouteCategorie');
 
+  ajoutBtn.addEventListener('click', ()=>{
+
+    
+    ajoutCategorie.classList.toggle('absolute');
+    ajoutCategorie.classList.toggle('relative');
+    ajoutCategorie.classList.toggle('left-0');
+
+  });
+  //=========================ajout-drop-mobil=================
+  const ajoutBtnMobile=document.querySelector('.ajoutBtnMobile');
+  const jouteCategorieMobile=document.querySelector('.jouteCategorieMobile');
+
+  ajoutBtnMobile.addEventListener('click', ()=>{
+
+    
+    jouteCategorieMobile.classList.toggle('absolute');
+    jouteCategorieMobile.classList.toggle('relative');
+    jouteCategorieMobile.classList.toggle('left-0');
+
+  });
   //====================drop-categorie=================
   const categorie=document.querySelector('.categorie');
   const allCaegorie=document.querySelector('.allCategorie');
@@ -331,8 +389,35 @@ document.addEventListener('DOMContentLoaded', function () {
     moreChose.classList.toggle('-left-full');
   });
 
- 
+
+
+  // console.log("first test");
+
+
+
+
+
+/* CRUD ---- CATEGORY*/
+
+
+
+
+
+
+
+
+
+
+/* CRUD ---- CATEGORY*/
+
+
   
- 
+
+
+
+
+
 
  
+
+  
