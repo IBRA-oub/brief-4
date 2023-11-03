@@ -22,6 +22,100 @@ inputs.forEach(input => input.addEventListener(
   }
 ));
 
+//////////////////////////////////////////////////////////////////////////
+document.addEventListener('DOMContentLoaded', function () {
+  const cards = document.querySelectorAll('.cards .card');
+
+  const itemsPerPage = 6;
+  let currentPage = 1;
+
+      // Implement pagination controls (numbered pages)
+      const numberedPages = document.querySelectorAll('.pagination [data-page]');
+      numberedPages.forEach(function (page) {
+          page.addEventListener('click', function () {
+              const pageNumber = parseInt(page.getAttribute('data-page'));
+              if (pageNumber) {
+                  currentPage = pageNumber;
+                  updatePagination();
+                  updatePageNumberClass();
+                  updateButtonVisibility();
+              }
+          });
+      });
+
+  function updatePagination() {
+      const startIndex = (currentPage - 1) * itemsPerPage;
+      const endIndex = startIndex + itemsPerPage;
+
+
+      cards.forEach(function (card, index) {
+          if (index >= startIndex && index < endIndex) {
+              card.style.display = 'block';
+          } else {
+              card.style.display = 'none';
+          }
+      });
+  }
+
+
+
+  const nextPageButton = document.getElementById('nextPage');
+  const prevPageButton = document.getElementById('prevPage');
+
+  nextPageButton.addEventListener('click', function () {
+      if (currentPage < numberedPages.length) {
+          currentPage++;
+          updatePagination();
+          updatePageNumberClass();
+          updateButtonVisibility();
+      }
+  });
+
+  prevPageButton.addEventListener('click', function () {
+      if (currentPage > 1) {
+          currentPage--;
+          updatePagination();
+          updatePageNumberClass();
+          updateButtonVisibility();
+      }
+  });
+
+  // Function to update page number classes
+  function updatePageNumberClass() {
+      numberedPages.forEach(function (page) {
+          const pageNumber = parseInt(page.getAttribute('data-page'));
+          if (pageNumber === currentPage) {
+              page.classList.add('bg-green-100');
+          } else {
+              page.classList.remove('bg-green-100');
+          }
+      });
+  }
+  // Function to update button visibility
+  function updateButtonVisibility() {
+      if (currentPage === 1) {
+          prevPageButton.style.display = 'none';
+      } else {
+          prevPageButton.style.display = 'inline';
+      }
+
+      if (currentPage === numberedPages.length) {
+          nextPageButton.style.display = 'none';
+      } else {
+          nextPageButton.style.display = 'inline';
+      }
+  }
+
+
+
+  // Initial pagination setup
+  updatePagination();
+  updatePageNumberClass();
+  updateButtonVisibility();
+});
+
+///////////////////////////////////////////
+
   //===============burger-menu====================
   const burger=document.querySelector('.nav');
   const burgerMenu=document.querySelector('.burgerMenu');
@@ -49,8 +143,15 @@ inputs.forEach(input => input.addEventListener(
     moreChose.classList.toggle('-left-full');
   });
 
- 
+
+
   
+
+
+
+
+
+
  
 
   
